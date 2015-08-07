@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">  
+<head>
+  <meta charset="utf-8">
+  <title>The BioDigital Human</title>
+  <link rel="stylesheet" href="css/reveal.min.css">
+  <link rel="stylesheet" href="css/theme/default.css" id="theme"> 
+  <link rel="stylesheet" href="plugin/highlight/styles/docco.css"> 
+  <link rel="icon" type="image/png" href="img/bd-logo.png">
+  <style>
+
+    .reveal .slide-number {
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    .reveal section img {
+      max-height: 600px;
+    }
+
+    .reveal pre {
+      box-shadow: none;
+    }
+
+    .reveal .me {
+      margin-top: 42px;
+    }
+
+    .reveal ul ul {
+      font-size: 0.8em;
+    }
+
+    #rasterization {
+      height: 300px;
+    }
+
+    iframe {
+      width: 1000px;
+      height: 600px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="reveal">
+    <div class="slides">
+      <section>
+        <h1>The BioDigital Human</h1>
+        <h2>Anatomical Storytelling with WebGL</h2>
+        <p>Tarek Sherif</p>
+        <p>BioDigital</p>
+      </section>
+
+      <section>
+        <h3>Goals</h3>
+        <ul>
+          <li>Interactive 3D to make anatomical content engaging</li>
+          <li>
+            Move beyond the anatomy atlas
+            <ul>
+              <li>Tell stories</li>
+              <li>Bring content to life</li>
+              <li>Map data to and from 3D models</li>
+            </ul>
+          </li>
+          <li>Make it widely accessible through the web</li>
+        </ul>
+      </section>
+
+      <section>
+        <iframe src="https://localhost/embedded.html?m=sig/heart.json&engine_version=5.1.0&loadMode=stream&ui-tools=true"></iframe>
+      </section>
+
+      <section>
+        <h3>The BioDigital Human</h3>
+          <ul>
+            <li>3D content library</li>
+            <li>
+              Rendering engine
+              <ul>
+                <li>Built on SceneJS</li>
+              </ul>
+            </li>
+            <li>User-created annotations and custom views</li>
+            <li>API for embedding Human content into external websites</li>
+          </ul>
+      </section>
+
+      <section>
+        <h3>Types of Interation</h3>
+        <ul>
+          <li>Annotate</li>
+          <li>Dissect</li>
+          <li>Isolate</li>
+          <li>Highlight</li>
+          <li>XRay</li>
+        </ul>
+      </section>
+
+      <section>
+        <h3>Types of Content</h3>
+        <ul>
+          <li>Static content</li>
+          <li>Basic Animation (transforms)</li>
+          <li>Complex Animation (morphs)</li>
+          <li>Tours</li>
+          <li>(+ text, audio, video, etc.)</li>
+        </ul>
+      </section>
+    
+    </div>
+  </div>
+  <script src="lib/js/head.min.js"></script>
+  <script src="js/reveal.min.js"></script>
+  <script src="js/highlight.min.js"></script>
+  <script>
+    Reveal.initialize({
+      history: true,
+      slideNumber: true,
+      controls: false
+    });
+
+    Reveal.addEventListener("slidechanged", function(event) {
+
+    });
+
+    hljs.initHighlightingOnLoad();
+    
+  </script>
+</body>
+</html>
