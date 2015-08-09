@@ -68,13 +68,31 @@
       </section>
 
       <section>
-        <iframe src="https://localhost/embedded.html?m=sig/heart.json&engine_version=5.1.0&loadMode=stream&ui-tools=true"></iframe>
+        <h3>Types of Interaction</h3>
+        <ul>
+          <li>Highlight</li>
+          <li>Dissect</li>
+          <li>Isolate</li>
+          <li>XRay</li>
+          <li>Annotate</li>
+        </ul>
+      </section>
+
+      <section>
+        <h3>For Example...</h3>
+        <a href="http://localhost:5000/widgets/default/?m=sig/heart.json&ui-tools=true&ui-panel=true&ui-annotations=true" target="_blank">The Human Heart</a>
       </section>
 
       <section>
         <h3>The BioDigital Human</h3>
           <ul>
-            <li>3D content library</li>
+            <li>
+              3D content library
+              <ul>
+                <li>5000+ anatomy objects</li>
+                <li>500+ health conditions</li>
+              </ul>
+            </li>
             <li>
               Rendering engine
               <ul>
@@ -87,27 +105,82 @@
       </section>
 
       <section>
-        <h3>Types of Interation</h3>
+        <h3>Types of Content</h3>
         <ul>
-          <li>Annotate</li>
-          <li>Dissect</li>
-          <li>Isolate</li>
-          <li>Highlight</li>
-          <li>XRay</li>
+          <li>
+            <a target="_blank" href="http://localhost:5000/widgets/default/?m=sig/brain.json&ui-tools=true">Static Content</a>
+          </li>
+          <li>
+            <a target="_blank" href="http://localhost:5000/widgets/default/?m=sig/glucose.json&ui-tools=true&ui-panel=true">Animations</a>
+          </li>
+          <li>
+            <a target="_blank" href="http://localhost:5000/widgets/default/?m=sig/acl_repair.json&ui-tools=true&ui-panel=true">Basic Tours</a>
+          </li>
+          <li>
+            <a target="_blank" href="http://localhost:5000/widgets/default/?m=sig/cranio.json&ui-tools=true&ui-panel=true">Complex Tours</a>
+          </li>
+          <li>(+ text, audio, video, etc.)</li>
         </ul>
       </section>
 
       <section>
-        <h3>Types of Content</h3>
+        <h3>Human API</h3>
         <ul>
-          <li>Static content</li>
-          <li>Basic Animation (transforms)</li>
-          <li>Complex Animation (morphs)</li>
-          <li>Tours</li>
-          <li>(+ text, audio, video, etc.)</li>
+          <li>
+            Embed a Human widget into your page via an iFrame
+            <ul>
+              <li>Select the content you want to embed</li>
+              <li>Find the view you want </li>
+              <li>Choose the UI and tools to include</li>
+            </ul>
+          </li>
         </ul>
       </section>
-    
+
+      <section>
+        <h3>Human API</h3>
+        <ul>
+          <li>
+            Manipulate embedded content through the Human API library
+          </li>
+        </ul>
+        <pre>
+          <code>
+    var human = new HumanAPI.Human("iFrameID"); 
+
+    human.timeline.pause(); 
+
+    human.camera.flyTo({
+        eye: { z: -25 },
+        velocity: 20
+    });
+          </code>
+        </pre>
+      </section>
+
+      <section>
+        <h3>Example</h3>
+        <ul>
+          <li><a target="_blank" href="http://conditions.about.com/cc/type2diabetes/overview/signs-symptoms/signs_intro">About.com Diabetes Page</a></li>
+        </ul>
+      </section>
+
+      <section>
+        <h3>Visit the new Dev Portal!</h3>
+        <ul>
+          <li>
+            <a target="_blank" href="https://developer.biodigital.com">https://developer.biodigital.com</a>
+          </li>
+        </ul>
+      </section>
+
+      <section>
+        <h1>Thanks!</h1>
+        <ul>
+          <li><a href="mailto:tarek@biodigital.com">tarek@biodigital.com</a></li>
+          <li><a target="_blank" href="https://twitter.com/thsherif">@thsherif</a></li>
+        </ul>
+      </section>
     </div>
   </div>
   <script src="lib/js/head.min.js"></script>
@@ -115,13 +188,10 @@
   <script src="js/highlight.min.js"></script>
   <script>
     Reveal.initialize({
+      transition: "none",
       history: true,
       slideNumber: true,
       controls: false
-    });
-
-    Reveal.addEventListener("slidechanged", function(event) {
-
     });
 
     hljs.initHighlightingOnLoad();
